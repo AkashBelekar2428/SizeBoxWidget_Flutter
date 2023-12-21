@@ -24,16 +24,20 @@ class SizedBoxScreen extends StatelessWidget{
     appBar: AppBar(
       title: Text("SizedBox"),
     ),
-    body: Center(
-      child: SizedBox(
-        width: 200,
-        height: 40,
-        child: ElevatedButton(
-          onPressed: (){
-          },
-          child: Text("Click Me!!"),
-        ),
+    body: ConstrainedBox(
+      constraints: BoxConstraints(
+        minWidth: 100,
+        minHeight: 20,
+        maxWidth: 100,
+        maxHeight: 80
       ),
+        child: SizedBox.shrink(
+          child: ElevatedButton(
+            onPressed: (){
+            },
+            child: Text("Click Me!!"),
+          ),
+        ),
     ),
   );
   }
