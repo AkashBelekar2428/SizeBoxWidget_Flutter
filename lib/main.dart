@@ -26,12 +26,12 @@ class SizedBoxScreen extends StatelessWidget{
     ),
     body: ConstrainedBox(
       constraints: BoxConstraints(
-        minWidth: 100,
-        minHeight: 20,
-        maxWidth: 100,
-        maxHeight: 80
+        minWidth: 150,
+        minHeight: 80,
+        maxWidth: 200,
+        maxHeight: 100
       ),
-        child: SizedBox.shrink(
+        child: SizedBox.expand(
           child: ElevatedButton(
             onPressed: (){
             },
